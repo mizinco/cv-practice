@@ -43,7 +43,7 @@ criterion = nn.CrossEntropyLoss()   # クロスエントロピー損失関数の
 optimizer = optim.Adam(model.parameters(), lr=0.001)    
 # Adam最適化アルゴリズムの定義（モデルのパラメータを更新するためのアルゴリズム、学習率0.001）
 
-for epoch in range(3):  # エポック数（データセット全体を何回学習するか）を指定
+for epoch in range(10):  # エポック数（データセット全体を何回学習するか）を指定
     running_loss = 0.0  # エポックごとの損失を初期化
     for i, (inputs, labels) in enumerate(trainloader):  # データローダーからバッチごとに入力とラベルを取得
         optimizer.zero_grad()   # 勾配の初期化（前のバッチの勾配をリセット）
